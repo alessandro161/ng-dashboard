@@ -1,0 +1,42 @@
+.sidenav-container {
+  height: 100%;
+}
+.mat-sidenav-fixed {
+   position: fixed;
+}
+.sidenav {
+  width: 24%;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+}
+.mat-toolbar.mat-primary {
+  background: #f9c30d;
+  color: #fff;
+}
+label{
+  margin-left: 2%;
+}
+  #blogin{
+    width:80px;
+    height:44px;
+    border-color:white;
+    background-color:greenyellow;
+    border-radius: 80%;
+}
+#tab-log{ 
+  display: inline;
+}
+input[type=text], input[type=password] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.container{
+  margin-left:10%;
+}

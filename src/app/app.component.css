@@ -1,0 +1,13 @@
+#strada{
+    width: 100%;
+    height: auto;
+}
+#logo{
+    width: 80px;
+    height: auto;
+    position:absolute;
+    top:18%;
+    left:45%;
+    background-color: gray;
+    border-radius: 50%;
+}
