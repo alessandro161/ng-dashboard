@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import * as $ from 'jquery';
+import { Router} from '@angular/router';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -7,27 +8,17 @@ import * as $ from 'jquery';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+    constructor(private router: Router) { }
+    username: string;
+    password: string;
+  
+    ngOnInit() {
+    }
+    login() : void {
+      if(this.username == 'jdoe' && this.password == 'password'){
+      this.router.navigate(["datiana"]);
+      }else {
+        alert("Credenziali non valide");
+      }
+    }
 }
-var utente={
-  username:"jdoe",
-  password:"password",
-}
-$(function(){
-  $("#bottone").click(function(){
-        var username=$("#usern").val();
-        var password=$("#passw").val();
-        if (username==utente.username && password==utente.password)
-        {
-          window.location.href="datiana.html";
-        }
-        else
-        {
-          alert("Password o User errati");
-        }
-  });
-});

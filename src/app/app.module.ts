@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -17,13 +16,15 @@ import { MatNativeDateModule } from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatTabsModule} from '@angular/material/tabs';
 import { LoginComponent } from './login/login.component';
-
+import { DatianaComponent } from './datiana/datiana.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
     FormComponent,
-    LoginComponent
+    LoginComponent,
+    DatianaComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +43,8 @@ import { LoginComponent } from './login/login.component';
     MatDatepickerModule,
     MatNativeDateModule,
     ReactiveFormsModule,
-    MatTabsModule
+    MatTabsModule,
+    FormsModule
   ],
   exports: [
     BrowserModule,

@@ -13,7 +13,9 @@ export class FormComponent implements OnInit {
       this.mioForm = new FormGroup ( {
                     nome : new FormControl ('' , [ Validators.required, Validators.minLength(5)] ) ,
                     cognome : new FormControl ('' , [ Validators.required, Validators.minLength(5)] ) ,
-                    citta : new FormControl ('' , [ Validators.required, Validators.minLength(5)] ),
+                    domicilio : new FormControl ('' , [ Validators.required, Validators.minLength(5)] ) ,
+                    residenza : new FormControl ('' , [ Validators.required, Validators.minLength(5)] ) ,
+                    telefono : new FormControl ('' , [ Validators.required, Validators.minLength(5)] ),
                     email : new FormControl ('' , [ Validators.required, Validators.email])
                   });
       }
@@ -25,16 +27,21 @@ getInfo(){
 }
 get nome(){return this.mioForm.get('nome')}
 get cognome(){return this.mioForm.get('cognome')}
-get citta(){return this.mioForm.get('citta')}
+get domicilio(){return this.mioForm.get('domicilio')}
+get residenza(){return this.mioForm.get('residenza')}
+get telefono(){return this.mioForm.get('telefono')}
 get email(){return this.mioForm.get('email')}
-}
-$(function(){
-  $("#registrati").click(function(){
+get data(){return this.mioForm.get('data')}
+
+registrati(){
         var nome=$("#inputnome").val();
         var cognome=$("#inputcognome").val();
+        var domicilio=$("#inputdomicilio").val();
+        var residenza=$("#inputresidenza").val();
+        var telefono=$("#inputtelefono").val();
         var email=$("#inputemail").val();
         var data=$("#inputdata").val();
-        if (nome!=" " && cognome!=" " && email!=" " && data!=" ")
+        if (nome!=" " && cognome!=" " && domicilio!=" "  && residenza!=" "  && telefono!=" "  && email!=" " && data!=" ")
         {
           alert("Registrazione completata correttamente");
         }
@@ -42,7 +49,8 @@ $(function(){
         {
           alert("Registrazione non completata");
         }
-  });
-});
+  }
+}
+
 
 

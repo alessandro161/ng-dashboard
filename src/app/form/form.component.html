@@ -13,6 +13,24 @@
   <span *ngIf=" cognome.invalid && cognome.dirty " >Campo non valido</span>
 </div>
 <div>
+  <mat-form-field>
+    <input matInput placeholder="Domicilio" formControlName="domicilio" id="inputdomicilio">
+  </mat-form-field>
+  <span *ngIf=" domicilio.invalid && domicilio.dirty " >Campo non valido</span>
+</div>
+<div>
+  <mat-form-field>
+    <input matInput placeholder="Residenza" formControlName="residenza" id="inputresidenza">
+  </mat-form-field>
+  <span *ngIf=" residenza.invalid && residenza.dirty " >Campo non valido</span>
+</div>
+<div>
+  <mat-form-field>
+    <input type="number" matInput placeholder="Telefono" formControlName="telefono" id="inputtelefono">
+  </mat-form-field>
+  <span *ngIf=" telefono.invalid && telefono.dirty " >Campo non valido</span>
+</div>
+<div>
     <mat-form-field>
       <input matInput placeholder="e-mail" formControlName="email" id="inputemail">
     </mat-form-field>
@@ -24,6 +42,6 @@
             <mat-datepicker #myDatepicker></mat-datepicker>
         </mat-form-field></form>
         <div>
-            <input type="button" id="registrati" value="Registrati">
+            <input type="button" (click)="registrati()" value="Registrati">
         </div>
 </div>
