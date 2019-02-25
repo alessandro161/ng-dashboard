@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
     ngOnInit() {
     }
     login() : void {
-      if(this.username == 'jdoe' && this.password == 'password'){
+      if(this.username == 'jdoe' && this.password == 'jdoe'){
       this.router.navigate(["datiana"]);
       }else {
         alert("Credenziali non valide");

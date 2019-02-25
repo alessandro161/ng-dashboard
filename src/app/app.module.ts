@@ -18,13 +18,17 @@ import { MatTabsModule} from '@angular/material/tabs';
 import { LoginComponent } from './login/login.component';
 import { DatianaComponent } from './datiana/datiana.component';
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { EventiComponent } from './eventi/eventi.component';
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
     FormComponent,
     LoginComponent,
-    DatianaComponent
+    DatianaComponent,
+    HomeComponent,
+    EventiComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +48,7 @@ import { FormsModule } from '@angular/forms';
     MatNativeDateModule,
     ReactiveFormsModule,
     MatTabsModule,
-    FormsModule
+    FormsModule,
   ],
   exports: [
     BrowserModule,
